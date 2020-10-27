@@ -13,7 +13,6 @@ gem "puma", ">= 4.3.5"
 gem "uglifier", "~> 4.1"
 gem "aws-sdk-s3", require: false
 gem "fog-aws"
-gem "fog", require: "fog/aws/storage"
 gem "faker", "~> 1.9"
 gem "delayed_job_active_record"
 
