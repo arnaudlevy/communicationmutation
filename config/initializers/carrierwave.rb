@@ -5,7 +5,7 @@ CarrierWave.configure do |config|
     config.storage :file
     config.asset_host = 'http://localhost:3000'
   else
-    config.storage = :fog
+    config.storage = Fog
     config.fog_directory = ENV['AWS_S3_BUCKET']
     config.fog_public = false
     config.fog_provider = 'fog/aws'
