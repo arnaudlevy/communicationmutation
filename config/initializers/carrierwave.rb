@@ -7,7 +7,7 @@ CarrierWave.configure do |config|
     config.storage :file
     config.asset_host = 'http://localhost:3000'
   else
-    config.storage = Fog
+    config.storage = :fog
     config.fog_provider = 'fog/aws'
     config.fog_credentials = {
       provider:              'AWS',
