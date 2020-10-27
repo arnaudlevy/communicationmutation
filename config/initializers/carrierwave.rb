@@ -2,16 +2,18 @@
 
 # Default CarrierWave setup.
 #
-CarrierWave.configure do |config|
-  config.permissions = 0o666
-  config.directory_permissions = 0o777
-  config.storage = :file
-  config.enable_processing = !Rails.env.test?
-end
+# CarrierWave.configure do |config|
+#   config.permissions = 0o666
+#   config.directory_permissions = 0o777
+#   config.storage = :file
+#   config.enable_processing = !Rails.env.test?
+# end
 
 # Setup CarrierWave to use Amazon S3. Add `gem "fog-aws" to your Gemfile.
 #
 CarrierWave.configure do |config|
+  config.storage = :fog
+  config.fog_provider = 'fog/aws'
   config.fog_credentials = {
     provider:              'AWS',
     aws_access_key_id:     ENV['AWS_S3_ACCESS_KEY_ID'],
@@ -20,9 +22,6 @@ CarrierWave.configure do |config|
     # host:                  's3.example.com',                                  # optional, defaults to nil
     # endpoint:              'https://s3.example.com:8080'                      # optional, defaults to nil
   }
-  # https://github.com/carrierwaveuploader/carrierwave/issues/2023
-  config.storage = :fog
-  config.fog_provider = 'fog/aws'
   config.fog_directory  = ENV['AWS_S3_BUCKET']                                 # required
   config.fog_public     = false                                               # optional, defaults to true
   config.fog_attributes = {
