@@ -9,11 +9,10 @@ gem "decidim", "0.22.0"
 # gem "decidim-initiatives", "0.22.0"
 
 gem "bootsnap", "~> 1.3"
-
 gem "puma", ">= 4.3.5"
 gem "uglifier", "~> 4.1"
 gem "aws-sdk-s3", require: false
-
+gem "fog-aws"
 gem "faker", "~> 1.9"
 gem "delayed_job_active_record"
 
