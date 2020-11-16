@@ -4,10 +4,10 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim"
+gem "decidim", "0.22.0"
 # gem "decidim-consultations", "0.22.0"
 # gem "decidim-initiatives", "0.22.0"
-gem 'decidim-blogs'
+# gem 'decidim-blogs'
 
 gem "bootsnap", "~> 1.3"
 gem "puma", ">= 4.3.5"
