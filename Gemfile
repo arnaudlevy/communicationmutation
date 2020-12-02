@@ -4,7 +4,7 @@ source "https://rubygems.org"
 
 ruby RUBY_VERSION
 
-gem "decidim", "0.22.0"
+gem "decidim"
 # gem "decidim-consultations", "0.22.0"
 # gem "decidim-initiatives", "0.22.0"
 # gem 'decidim-blogs'
@@ -19,8 +19,7 @@ gem "delayed_job_active_record"
 
 group :development, :test do
   gem "byebug", "~> 11.0", platform: :mri
-
-  gem "decidim-dev", "0.22.0"
+  gem "decidim-dev"
 end
 
 group :development do
